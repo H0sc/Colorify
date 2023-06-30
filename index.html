@@ -5,19 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <title>Colorify</title>
+    <script src="https://kit.fontawesome.com/832b260f16.js" crossorigin="anonymous"></script>
     <script src="./index.js" defer></script>
 </head>
 <body>
     <div class="container">
         <h1>ColorPicker</h1>
-        <div class="circle" id="circleID"></div>
-        <div class="action">
-            <button onclick="paint('red')">red</button>
-            <button onclick="paint('green')">green</button>
-            <button onclick="paint('yellow')">yellow</button>
-            <button onclick="random()">random</button>
-            <button onclick="changeForm()">change to </button>
-            <!-- <button onclick="changeSize()">flatten circle</button> -->
+        <div id="circleID" style="background-color: white;"></div>
+        <h2 id="colorHexText">current hex-code: #fff</h2>
+        <div class="colors">
+            <form>
+                <!-- COLOR INPUT TEXT  -->
+                <div>
+                    <label for="colorStringInput">Type in a Color: </label>
+                    <input type="text" id="colorStringInput">
+                    <button id="colorStringBTN"><i class="fa-solid fa-check"></i></button>
+                </div>
+                <!-- COLOR INPUT PALLETTE -->
+                <div id="colorPalletteInputDiv">
+                    <label for="colorPalletteInput">Choose Color: </label>
+                    <input type="color" id="colorPalletteInput">
+                </div>
+            </form>
+            <button onclick="randomHex()">random hex</button>
+        </div>
+        <div>
+            <button id="shapeBtn">shape</button>
         </div>
     </div>
 </body>
