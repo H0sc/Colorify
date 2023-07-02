@@ -13,21 +13,29 @@
         <h1>ColorPicker</h1>
         <div id="circleID" style="background-color: white;"></div>
         <h2 id="colorHexText">current hex-code: #fff</h2>
+        <h2 id="colorRGBText">current RGB-value: rgb(255, 255, 255)</h2>
         <div class="colors">
             <form>
                 <!-- COLOR INPUT TEXT  -->
-                <div>
-                    <label for="colorStringInput">Type in a Color: </label>
-                    <input type="text" id="colorStringInput">
-                    <button id="colorStringBTN"><i class="fa-solid fa-check"></i></button>
+                <div id="colorStringInputDiv">
+                    <label for="colorStringInput">Color Name: </label>
+                    <div>
+                      <input type="text" id="colorStringInput" placeholder="type color name">
+                      <button id="colorStringBTN"><i class="fa-solid fa-check"></i></button>  
+                    </div>
+                    
                 </div>
                 <!-- COLOR INPUT PALLETTE -->
                 <div id="colorPalletteInputDiv">
-                    <label for="colorPalletteInput">Choose Color: </label>
-                    <input type="color" id="colorPalletteInput">
+                    <label for="colorPalletteInput">Color Pallette: </label>
+                    <div>
+                        <input type="color" id="colorPalletteInput">
+                    </div>
                 </div>
             </form>
-            <button onclick="randomHex()">random hex</button>
+            <div id="randomHexBTNDiv">
+                <button id="randomHexBTN">random hex</button>
+            </div>
         </div>
         <div>
             <button id="shapeBtn">shape</button>

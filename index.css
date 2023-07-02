@@ -1,8 +1,75 @@
+/* GLOBALE STYLES */
+
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1, h2 {
+    color: tomato;
+}
+
+button, input {
+    cursor: pointer;
+    height: 30px;
+    min-width: 50px;
+}
+
+/* ------------------------------- */
+/* ------------------------------- */
+
+/* SHARED STYLES */
+
+#shapeBTN, #randomHexBTN {
+    height: 30px;
+    min-width: 100px;
+}
+
+#colorPalletteInputDiv, #colorStringInputDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.colors > *,  #shapeBtn, form > input{
+    padding: 0.3rem;
+}
+
+/* ------------------------------- */
+/* ------------------------------- */
+
+/* CONTAINER STYLES */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.colors {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width:50%;
+}
+
+/* ------------------------------- */
+/* ------------------------------- */
+
+/* CIRCLE UND HEXTEXT STYLES */
 
 #circleID {
     border-radius: 50%;
@@ -12,33 +79,49 @@
     margin: 1em;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-h1 {
-    color: tomato;
-}
-
 #colorHexText {
     color: tomato;
     margin: .2rem;
     padding: .2rem;
 }
 
-button {
-    cursor: pointer;
-}
+/* ------------------------------- */
+/* ------------------------------- */
 
-.colors {
+/* PALLETTE STYLES */
+
+#colorPalletteInputDiv > div {
     display: flex;
-    flex-direction: column;
-    align-items: start;
+    justify-content: end;
+    align-items: center;
+    width: 50%;
+
 }
 
-.colors > *,  #shapeBtn, form > input{
-    padding: 0.3rem;
+#colorPalletteInputDiv > div > label {
+    margin-right: 10px;
 }
+
+/* ------------------------------- */
+/* ------------------------------- */
+
+/* FORM STYLES */
+
+form {
+    width: 100%;
+}
+
+form > div {
+    font-size: 1em;
+    color: tomato;
+    font-weight: 400;
+}
+
+#randomHexBTNDiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* ------------------------------- */
+/* ------------------------------- */
