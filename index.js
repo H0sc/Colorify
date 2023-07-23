@@ -67,7 +67,7 @@ function checkColorFormat(str) {
 
 function setColorNameAndRGB(name) {
   name = name.trim().toLowerCase();
-  circle.style.backgroundColor = name.trim();
+  circle.style.backgroundColor = name
 }
 
 function setHexAsBG(hex) {
@@ -76,11 +76,17 @@ function setHexAsBG(hex) {
   hex = hex.trim()
   if (hex.includes("#")) {
     circle.style.backgroundColor = hex
-    txt = `hexadecimal: ${hex}`
+    txt = `hexadecimal: ${hex}` 
+    // rgbTxt = `${}`
+    colorRGBText.innerHTML = circle.style.backgroundColor.toString(10)
+    console.log(rgbTxt)
   } else {
     circle.style.backgroundColor = `#${hex}`
     txt = `hexadecimal: #${hex}`
+    colorRGBText.innerHTML = circle.style.backgroundColor.toString(10)
+    console.log(rgbTxt)
   }
+ 
   // setHexAsBG(hex);
   // getRGBfromHexBG(hex)
 }
@@ -158,26 +164,26 @@ function setHexAsBG(hex) {
 // }
 
 // soll den hex buchstaben in entsprechende zahl umwandeln
-function letterToDigit(letter, index) {
-    let hexDigitVals = {
-    a: 10, 
-    b: 11, 
-    c: 12, 
-    d: 13, 
-    e: 14, 
-    f: 15
-  }
-  for (const key in hexDigitVals) {
-    // key ist jeder buchstabe, also key aus hexDigitVals
-    if (key === letter) {
-      console.log(letter ,"match", key)
-      console.log("wert dazu", hexDigitVals[key])
-      console.log("der index", index)
-      replaceAtIndex.calcRes = hexDigitVals[key]
-      replaceAtIndex.index = index
-    }
-  }
-}
+// function letterToDigit(letter, index) {
+//     let hexDigitVals = {
+//     a: 10, 
+//     b: 11, 
+//     c: 12, 
+//     d: 13, 
+//     e: 14, 
+//     f: 15
+//   }
+//   for (const key in hexDigitVals) {
+//     // key ist jeder buchstabe, also key aus hexDigitVals
+//     if (key === letter) {
+//       console.log(letter ,"match", key)
+//       console.log("wert dazu", hexDigitVals[key])
+//       console.log("der index", index)
+//       replaceAtIndex.calcRes = hexDigitVals[key]
+//       replaceAtIndex.index = index
+//     }
+//   }
+// }
 
 
 function setRGBcolor(rgb) {
