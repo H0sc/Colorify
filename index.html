@@ -10,18 +10,21 @@
 </head>
 <body>
     <div class="container">
-        <h1>ColorPicker</h1>
+        <h1>Color Displayer</h1>
         <div id="circleID" style="background-color: white;"></div>
-        <h2 id="colorHexText">current hex-code: #fff</h2>
-        <h2 id="colorRGBText">current RGB-value: rgb(255, 255, 255)</h2>
+        <div class="colorDescriptionTxt">
+            <p id="colorHexText">hexadecimal: #fff</p>
+            <p id="colorRGBText">rgb(255, 255, 255)</p>
+        </div>
+        
         <div class="colors">
             <form>
                 <!-- COLOR INPUT TEXT  -->
                 <div id="colorStringInputDiv">
-                    <label for="colorStringInput">Color Name: </label>
+                    <label for="colorStringInput">Enter Color: </label>
                     <div>
-                      <input type="text" id="colorStringInput" placeholder="type color name">
-                      <button id="colorStringBTN"><i class="fa-solid fa-check"></i></button>  
+                      <input type="text" id="colorStringInput" class="inputs" placeholder="name / hex / rgb">
+                      <button id="checkBTN"><i class="fa-solid fa-check"></i></button>  
                     </div>
                     
                 </div>
@@ -29,7 +32,7 @@
                 <div id="colorPalletteInputDiv">
                     <label for="colorPalletteInput">Color Pallette: </label>
                     <div>
-                        <input type="color" id="colorPalletteInput">
+                        <input type="color" id="colorPalletteInput" class="inputs">
                     </div>
                 </div>
             </form>
@@ -38,7 +41,7 @@
             </div>
         </div>
         <div>
-            <button id="shapeBtn">shape</button>
+            <button id="shapeBTN">shape</button>
         </div>
     </div>
 </body>
