@@ -84,7 +84,6 @@ function setHexAsBG(hex) {
     circle.style.backgroundColor = `#${hex}`
     txt = `hexadecimal: #${hex}`
     colorRGBText.innerHTML = circle.style.backgroundColor.toString(10)
-    console.log(rgbTxt)
   }
  
   // setHexAsBG(hex);
